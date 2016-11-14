@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:gravity = "center"
+        >
+
+        <LinearLayout
+            android:id="@+id/main_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:foregroundGravity="center"
+                android:text="ParkingApp"
+                android:layout_weight="85"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-black"
+
+
+                />
+
+
+        </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar">
+
+
+
+
+    <Button
+        android:text="Search Location"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:id="@+id/Search"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:onClick="buttonOnClick2"
+        />
+
+    <fragment android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        tools:layout="@layout/activity_maps2"
+        />
+    <!--tools:context="com.example.rsavage.parkingapp.MapsActivity2"
+    tools:layout="@layout/activity_maps2"/>
+    -->
+<!--
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        tools:layout="@layout/place_autocomplete_fragment"
+        android:layout_centerInParent="true" />
+
+-->
+<!--
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:hint="Search Location"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white">
+
+    </EditText>
+-->
+    <!--
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:drawablePadding="10dp"
+        android:background="@drawable/ic_search_black_24dp"
+        android:onClick="geoLocate"/>
+      -->
+<!---
+   <Button
+        android:id="@+id/button2"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/Search"
+        android:layout_alignStart="@+id/Search"
+        android:background="@drawable/ic_menu_black_24dp" />
+      -->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="60dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_credit_card_white_24dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="buttonOnClick"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
